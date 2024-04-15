@@ -23,7 +23,7 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="he\" />
+    <Folder Include="he\hello\" />
     <Folder Include="NewFolder\" />
   </ItemGroup>
 
