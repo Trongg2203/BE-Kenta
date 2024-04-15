@@ -23,6 +23,8 @@ builder.Services.AddScoped<IUserTypeRepositoty,  UserTypeRepositoty>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IBillRepository, BillRepository>();
 builder.Services.AddScoped<IBillInforRepository, BillInforRepository>();
+builder.Services.AddScoped<IProducerRepository, ProducerRepository>();
+builder.Services.AddScoped<IImportGoodRepository, ImportGoodRepository>();
 
 
 var app = builder.Build();
