@@ -193,9 +193,8 @@ public partial class ClothesShopManagementContext : DbContext
 
         modelBuilder.Entity<Rating>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("Rating");
+            entity.HasKey(e => e.IdRating);
+            entity.ToTable("Rating");
 
             entity.Property(e => e.Comment).HasMaxLength(200);
             entity.Property(e => e.CreatedDate).HasColumnType("date");

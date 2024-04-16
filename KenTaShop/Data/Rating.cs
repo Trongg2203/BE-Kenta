@@ -5,6 +5,7 @@ namespace KenTaShop.Data;
 
 public partial class Rating
 {
+    public int IdRating { get; set; }
     public int IdGoods { get; set; }
 
     public int? IdBill { get; set; }
