@@ -12,7 +12,7 @@ namespace KenTaShop.Services
         Task<JsonResult> Add(RatingVM rating);
         Task<RatingVM> GetById(int idbill, int idgood);
         Task<JsonResult> Edit(RatingVM rating);
-        Task Delete(RatingVM rating);
+        Task<JsonResult> Delete(RatingVM Rating);
     }
     public class RatingRepository:IRatingRepository
     {
@@ -53,6 +53,27 @@ namespace KenTaShop.Services
             
         }
 
+        public async Task<JsonResult> Delete(RatingVM Rating)
+        {
+            var rating = await _context.Ratings.SingleOrDefaultAsync(s => s.IdBill == Rating.IdBill && s.IdGoods == Rating.IdGoods);
+            if (rating == null)
+            {
+                return new JsonResult("Không tìm thấy")
+                {
+                    StatusCode = StatusCodes.Status400BadRequest
+                };
+            }
+            else
+            {
+                _context.Remove(rating);
+                await _context.SaveChangesAsync();
+                return new JsonResult("Xoá thành công")
+                {
+                    StatusCode = StatusCodes.Status200OK
+                };
+            }
+        }
+
         public async Task<JsonResult> Edit(RatingVM Rating)
         {
             var rating = await _context.Ratings.SingleOrDefaultAsync(s => s.IdBill == Rating.IdBill && s.IdGoods == Rating.IdGoods);
@@ -65,8 +86,6 @@ namespace KenTaShop.Services
             }
             else
             {
-                rating.IdBill = Rating.IdBill;
-                rating.IdGoods = Rating.IdGoods;
                 rating.Rating1 = Rating.Rating1;
                 rating.Comment = Rating.Comment;
                 rating.CreatedDate = Rating.CreatedDate;

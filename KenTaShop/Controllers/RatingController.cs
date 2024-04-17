@@ -40,11 +40,11 @@ namespace KenTaShop.Controllers
             var rating = await _ratingRepo.Edit(Rating);
             return Ok(rating);
         }
-        //[HttpDelete("Delete")]
-        //public async Task<JsonResult> Delete(RatingVM Rating)
-        //{
-        //    //var rating = await _ratingRepo.Delete(Rating);
-        //    //return Ok(rating);
-        //}
+        [HttpDelete("Delete")]
+        public async Task<IActionResult> Delete(RatingVM Rating)
+        {
+            var rating = await _ratingRepo.Delete(Rating);
+            return Ok(rating);
+        }
     }
 }

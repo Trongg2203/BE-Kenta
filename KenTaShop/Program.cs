@@ -27,6 +27,11 @@ builder.Services.AddScoped<IProducerRepository, ProducerRepository>();
 builder.Services.AddScoped<IImportGoodRepository, ImportGoodRepository>();
 builder.Services.AddScoped<IImportGoodsinforRepository, ImportGoodsinforRepository>();
 builder.Services.AddScoped<IGoodstypeRepository, GoodstypeRepository>();
+builder.Services.AddScoped<IRatingRepository, RatingRepository>();
+builder.Services.AddScoped<IGoodsinforRepository, GoodsinforRepository>();
+builder.Services.AddScoped<IGoodsRepository, GoodsRepository>();
+builder.Services.AddScoped<IPictureRepository, PictureRepository>();
+
 
 
 var app = builder.Build();

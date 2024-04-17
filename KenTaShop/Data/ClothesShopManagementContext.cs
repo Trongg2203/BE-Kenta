@@ -97,7 +97,7 @@ public partial class ClothesShopManagementContext : DbContext
 
             entity.ToTable("Goodsinfor");
 
-            entity.Property(e => e.IdGoodsInfor).ValueGeneratedNever();
+            entity.Property(e => e.IdGoodsInfor);
             entity.Property(e => e.Color).HasMaxLength(50);
             entity.Property(e => e.GoodsDetail).HasMaxLength(100);
             entity.Property(e => e.Size).HasMaxLength(50);
@@ -218,7 +218,7 @@ public partial class ClothesShopManagementContext : DbContext
 
             entity.ToTable("Status");
 
-            entity.Property(e => e.IdStatus).ValueGeneratedNever();
+            entity.Property(e => e.IdStatus);
             entity.Property(e => e.Statusdetail).HasMaxLength(50);
         });
 

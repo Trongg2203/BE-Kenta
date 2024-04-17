@@ -151,3 +151,14 @@ C:\Users\nthai\Downloads\Test-Kenta\KenTaShop\obj\Debug\net7.0\refint\KenTaShop.
 C:\Users\nthai\Downloads\Test-Kenta\KenTaShop\obj\Debug\net7.0\KenTaShop.pdb
 C:\Users\nthai\Downloads\Test-Kenta\KenTaShop\obj\Debug\net7.0\KenTaShop.genruntimeconfig.cache
 C:\Users\nthai\Downloads\Test-Kenta\KenTaShop\obj\Debug\net7.0\ref\KenTaShop.dll
+C:\Users\admin\Documents\GitHub\Test-Kenta\KenTaShop\obj\Debug\net7.0\KenTaShop.csproj.AssemblyReference.cache
+C:\Users\admin\Documents\GitHub\Test-Kenta\KenTaShop\obj\Debug\net7.0\KenTaShop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Documents\GitHub\Test-Kenta\KenTaShop\obj\Debug\net7.0\KenTaShop.AssemblyInfoInputs.cache
+C:\Users\admin\Documents\GitHub\Test-Kenta\KenTaShop\obj\Debug\net7.0\KenTaShop.AssemblyInfo.cs
+C:\Users\admin\Documents\GitHub\Test-Kenta\KenTaShop\obj\Debug\net7.0\KenTaShop.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\GitHub\Test-Kenta\KenTaShop\obj\Debug\net7.0\KenTaShop.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\admin\Documents\GitHub\Test-Kenta\KenTaShop\obj\Debug\net7.0\KenTaShop.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\admin\Documents\GitHub\Test-Kenta\KenTaShop\obj\Debug\net7.0\KenTaShop.sourcelink.json
+C:\Users\admin\Documents\GitHub\Test-Kenta\KenTaShop\obj\Debug\net7.0\KenTaShop.dll
+C:\Users\admin\Documents\GitHub\Test-Kenta\KenTaShop\obj\Debug\net7.0\refint\KenTaShop.dll
+C:\Users\admin\Documents\GitHub\Test-Kenta\KenTaShop\obj\Debug\net7.0\KenTaShop.pdb

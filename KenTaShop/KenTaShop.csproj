@@ -25,6 +25,8 @@
     <Folder Include="Data\" />
     <Folder Include="he\hello\" />
     <Folder Include="NewFolder\" />
+    <Folder Include="Upload\Files\Goods\" />
+    <Folder Include="Upload\Images\Goods\" />
   </ItemGroup>
 
 </Project>
