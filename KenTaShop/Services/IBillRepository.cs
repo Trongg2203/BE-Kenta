@@ -28,7 +28,7 @@ namespace KenTaShop.Services
                     IdUser = addbill.IdUser,
                     BillDate = addbill.BillDate,
                     BillTotal = addbill.BillTotal,
-                    //IdStatus = addbill.IdStatus,
+                    IdStatus = addbill.IdStatus,
                 };
                 await _context.Bills.AddAsync(bill);
                 await _context.SaveChangesAsync();
@@ -67,7 +67,7 @@ namespace KenTaShop.Services
                     check.IdUser = idBill;
                     check.BillTotal = editbill.BillTotal;
                     check.BillDate = editbill.BillDate;
-                    //check.IdStatus = editbill.IdStatus;
+                    check.IdStatus = editbill.IdStatus;
 
                     _context.SaveChanges();
                     return new JsonResult("Thành công")

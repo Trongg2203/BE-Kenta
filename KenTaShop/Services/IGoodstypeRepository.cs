@@ -88,6 +88,7 @@ namespace KenTaShop.Services
         {
             var goodstype = await _context.Goodstypes.Select(u => new GoodstypeMD
             {
+                IdGoodstype = u.IdGoodstype,
                 GoodstypeDetail = u.GoodstypeDetail,
                 Displayorder = u.Displayorder,
                 FatherFolder = u.FatherFolder,
@@ -104,6 +105,7 @@ namespace KenTaShop.Services
                 return null;
             return new GoodstypeMD
             {
+                
                 IdGoodstype = goodstype.IdGoodstype,
                 GoodstypeDetail = goodstype.GoodstypeDetail,
                 Displayorder = goodstype.Displayorder,

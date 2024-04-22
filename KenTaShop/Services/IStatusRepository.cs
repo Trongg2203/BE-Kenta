@@ -9,28 +9,27 @@ namespace KenTaShop.Services
     {
         Task<List<StatusVM>> GetAll();
         Task<StatusVM> GetById(int id);
-        Task<JsonResult> Add(StatusVM sta);
+        Task<JsonResult> Add(string sta);
         Task<JsonResult> Edit(StatusVM sta);
         Task<JsonResult> Delete(int id);
     }
-    public class StatusRepository:IStatusRepository 
+    public class StatusRepository : IStatusRepository
     {
         private readonly ClothesShopManagementContext _context;
 
-        StatusRepository(ClothesShopManagementContext context)
+        public StatusRepository(ClothesShopManagementContext context)
         {
             _context = context;
         }
 
-        public async Task<JsonResult> Add(StatusVM sta)
+        public async Task<JsonResult> Add(string sta)
         {
-            var status = await _context.Statuses.SingleOrDefaultAsync(s => s.IdStatus == sta.IdStatus);
+            var status = await _context.Statuses.SingleOrDefaultAsync(s => s.Statusdetail==sta);
             if (status == null)
             {
                 var _status = new Status
                 {
-                    IdStatus = sta.IdStatus,
-                    Statusdetail = sta.Statusdetail,
+                    Statusdetail = sta,
                 };
                 await _context.AddAsync(_status);
                 await _context.SaveChangesAsync();
@@ -75,7 +74,6 @@ namespace KenTaShop.Services
             var status = await _context.Statuses.SingleOrDefaultAsync(s => s.IdStatus == sta.IdStatus);
             if (status != null)
             {
-                status.IdStatus= sta.IdStatus;
                 status.Statusdetail = sta.Statusdetail;
                 await _context.SaveChangesAsync();
                 return new JsonResult("Đã sửa thành công")
@@ -120,5 +118,5 @@ namespace KenTaShop.Services
             }
         }
     }
-
 }
+

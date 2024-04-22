@@ -43,7 +43,7 @@ public partial class ClothesShopManagementContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=DucTrong;Initial Catalog=ClothesShopManagement;Integrated Security=True;Trust Server Certificate=True");
+        => optionsBuilder.UseSqlServer("Data Source=NguyenBinh\\SQLEXPRESS;Initial Catalog=ClothesShopManagement;Integrated Security=True;Trust Server Certificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -83,7 +83,7 @@ public partial class ClothesShopManagementContext : DbContext
         {
             entity.HasKey(e => e.IdGoods);
 
-            entity.Property(e => e.IdGoods).ValueGeneratedNever();
+            entity.Property(e => e.IdGoods);
             entity.Property(e => e.GoodsName).HasMaxLength(50);
 
             entity.HasOne(d => d.IdGoodstypeNavigation).WithMany(p => p.Goods)
@@ -114,7 +114,7 @@ public partial class ClothesShopManagementContext : DbContext
 
             entity.ToTable("Goodstype");
 
-            entity.Property(e => e.IdGoodstype).ValueGeneratedNever();
+            entity.Property(e => e.IdGoodstype);
             entity.Property(e => e.GoodstypeDetail).HasMaxLength(100);
         });
 
@@ -122,7 +122,7 @@ public partial class ClothesShopManagementContext : DbContext
         {
             entity.HasKey(e => e.IdImport);
 
-            entity.Property(e => e.IdImport).ValueGeneratedNever();
+            entity.Property(e => e.IdImport);
             entity.Property(e => e.CreatedDate).HasColumnType("date");
 
             entity.HasOne(d => d.IdGoodstypeNavigation).WithMany(p => p.ImportGoods)
@@ -144,7 +144,7 @@ public partial class ClothesShopManagementContext : DbContext
 
             entity.ToTable("ImportGoodsinfor");
 
-            entity.Property(e => e.IdImportGoodsinfor).ValueGeneratedNever();
+            entity.Property(e => e.IdImportGoodsinfor);
             entity.Property(e => e.Vat).HasColumnName("VAT");
 
             entity.HasOne(d => d.IdGoodsNavigation).WithMany(p => p.ImportGoodsinfors)
@@ -162,7 +162,7 @@ public partial class ClothesShopManagementContext : DbContext
 
             entity.ToTable("Picture");
 
-            entity.Property(e => e.IdPicture).ValueGeneratedNever();
+            entity.Property(e => e.IdPicture);
             entity.Property(e => e.Url)
                 .HasMaxLength(100)
                 .IsFixedLength()
@@ -180,7 +180,7 @@ public partial class ClothesShopManagementContext : DbContext
 
             entity.ToTable("Producer");
 
-            entity.Property(e => e.IdProducer).ValueGeneratedNever();
+            entity.Property(e => e.IdProducer);
             entity.Property(e => e.Email).HasMaxLength(50);
             entity.Property(e => e.Location).HasMaxLength(50);
             entity.Property(e => e.Phonenumber)

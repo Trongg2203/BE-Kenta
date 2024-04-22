@@ -26,7 +26,7 @@ namespace KenTaShop.Services
                 var add = new Billinfor
                 {
                     Idbill = billinformd.Idbill,
-                    //IdGoods = billinformd.IdGoods,
+                    IdGoods = billinformd.IdGoods,
                     Quantity = billinformd.Quantity,
                     Total = billinformd.Total,
                 };
@@ -73,7 +73,7 @@ namespace KenTaShop.Services
                 else
                 {
                     check.Idbill = editbillinfor.Idbill;
-                    
+                    check.IdGoods=editbillinfor.IdGoods;
                     check.Quantity = editbillinfor.Quantity;
                     check.Total = editbillinfor.Total;
 

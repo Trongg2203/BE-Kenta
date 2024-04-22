@@ -32,7 +32,7 @@ namespace KenTaShop.Services
             {
                 var _Good = new Good
                 {
-                    IdGoods = goodsVM.IdGoods,
+                    //IdGoods = goodsVM.IdGoods,
                     IdGoodstype = goodsVM.IdGoodstype,
                     GoodsName = goodsVM.GoodsName,
                     Quantity = goodsVM.Quantity,
@@ -112,7 +112,7 @@ namespace KenTaShop.Services
             }
             else
             {
-                Goods.IdGoods = good.IdGoods;
+                //Goods.IdGoods = good.IdGoods;
                 Goods.GoodsName = good.GoodsName;
                 Goods.IdGoodstype = good.IdGoodstype;
                 Goods.Quantity = good.Quantity;

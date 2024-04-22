@@ -28,7 +28,7 @@ namespace KenTaShop.Controllers
             return Ok(status);
         }
         [HttpPost("Add")]
-        public async Task<IActionResult> Add(StatusVM sta)
+        public async Task<IActionResult> Add(string sta)
         {
             var status = await _StatusRepo.Add(sta);
             return Ok(status);

@@ -32,7 +32,7 @@ namespace KenTaShop.ViewModel
 
         public double? BillTotal { get; set; }
 
-        //public int? IdStatus { get; set; }
+        public int? IdStatus { get; set; }
     }
     
     public class deleBill
