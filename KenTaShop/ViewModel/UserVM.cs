@@ -42,4 +42,10 @@ namespace KenTaShop.ViewModel
 
         public string Pass { get; set; } = null!;
     }
+    public class AdminAdd
+    {
+        public string? Username { get; set; }
+        public string? Email { get; set; }
+    }
+
 }
