@@ -1,5 +1,6 @@
 ﻿using KenTaShop.Data;
 using KenTaShop.ViewModel;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,6 +8,7 @@ namespace KenTaShop.Services
 {
     public interface IUserRepository
     {
+        Task<JsonResult> AdminAdd(AdminAdd admiadd);
         Task<JsonResult> AddUser(InforUser inforuser);
         Task<JsonResult> DeleteById(int idUser);
         Task<JsonResult> EditUser(int idUser, InforUser infouser);
@@ -16,10 +18,14 @@ namespace KenTaShop.Services
         public class UserRepository : IUserRepository
         {
             private readonly ClothesShopManagementContext _context;
+            private readonly PasswordHasher passwordHasher ;
+            private readonly ISendEmailRepository IsendEmailServicesRepo;
 
-            public UserRepository(ClothesShopManagementContext context)
+            public UserRepository(ClothesShopManagementContext context, ISendEmailRepository IsendEmailServicesRepo)
             {
                 _context = context;
+                passwordHasher = new PasswordHasher();
+                this.IsendEmailServicesRepo = IsendEmailServicesRepo;
             }
 
             public async Task<JsonResult> AddUser(InforUser inforuser )
@@ -52,6 +58,43 @@ namespace KenTaShop.Services
                     };
 
                 }
+            }
+
+            public async Task<JsonResult> AdminAdd(AdminAdd adminadd)
+            {
+                var user = await(_context.Users.SingleOrDefaultAsync(u => u.Email == adminadd.Email));
+                if (user != null)
+                {
+                    return new JsonResult("tài khoản đã tồn tại")
+                    {
+                        StatusCode = StatusCodes.Status400BadRequest
+                    };
+                }
+                var pass = passwordHasher.GetRandomPassword();
+                Console.WriteLine(pass);
+                var passhash = passwordHasher.HashPassword(pass);
+                var accuser = new User
+                {
+
+                    Username = adminadd.Username,
+                    Pass = passhash,
+                    Email = adminadd.Email,
+                };
+
+                await _context.AddAsync(accuser);
+                EmailModel emailModel = new EmailModel();
+                emailModel.ToEmail = adminadd.Email;
+                emailModel.Subject = "Chào bạn";
+                emailModel.Body = $"tài khoản:{adminadd.Email} \n mật khẩu là {pass}";
+                var kt = IsendEmailServicesRepo.SendEmail(emailModel);
+                if (kt)
+                    Console.WriteLine("gui mail thanh cong");
+                else
+                { Console.WriteLine("gui mail that bai"); }
+                return new JsonResult("thêm tài khoản thành công ")
+                {
+                    StatusCode = StatusCodes.Status201Created
+                };
             }
 
             public async Task<JsonResult> DeleteById(int idUser)

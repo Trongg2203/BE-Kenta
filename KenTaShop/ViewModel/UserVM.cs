@@ -47,5 +47,5 @@ namespace KenTaShop.ViewModel
         public string? Username { get; set; }
         public string? Email { get; set; }
     }
-
+    
 }

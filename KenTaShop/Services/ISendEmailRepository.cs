@@ -1,23 +1,22 @@
-﻿
-using KenTaShop.ViewModel;
-using System.Net;
+﻿using KenTaShop.ViewModel;
 using System.Net.Mail;
-using System.Reflection;
+using System.Net;
 
-namespace MonBackEnd.Services
+namespace KenTaShop.Services
 {
-    public interface ISendEmailServices
+    public interface ISendEmailRepository
     {
         bool SendEmail(EmailModel email);
     }
-    public class SendEmailServices : ISendEmailServices
+
+    public class SendEmailServices : ISendEmailRepository
     {
         private IConfiguration _confEmail;
         public SendEmailServices(IConfiguration confEmail)
         {
             _confEmail = confEmail;
         }
-        public bool SendEmail(EmailModel email) //List<string> attachments
+        public bool SendEmail(EmailModel email) 
         {
             try
             {

@@ -32,6 +32,8 @@ builder.Services.AddScoped<IGoodsinforRepository, GoodsinforRepository>();
 builder.Services.AddScoped<IGoodsRepository, GoodsRepository>();
 builder.Services.AddScoped<IPictureRepository, PictureRepository>();
 builder.Services.AddScoped<IStatusRepository, StatusRepository>();
+builder.Services.AddScoped<ISendEmailRepository, SendEmailServices>();
+
 
 
 

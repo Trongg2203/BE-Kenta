@@ -54,7 +54,7 @@ namespace KenTaShop.Services
                     _context.Remove(checkexist);
                     await _context.SaveChangesAsync();
                     return new JsonResult("Deleted")
-                    {
+                    { 
                         StatusCode = StatusCodes.Status200OK
                     };
                 }

@@ -42,5 +42,12 @@ namespace KenTaShop.Controllers
             var user = await _userRepo.DeleteById(idUser);
             return Ok(user);
         }
+
+        [HttpPost("AdminAdd")]
+        public async Task<IActionResult> AdminAdd([FromForm] AdminAdd adminadd)
+        {
+            var adadd = await _userRepo.AdminAdd(adminadd);
+            return Ok(adadd);
+        }
     }
 }
