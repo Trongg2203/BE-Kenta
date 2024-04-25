@@ -7,6 +7,7 @@
       "RelativeMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|solutionrelative:kentashop\\services\\ibillinforrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|d:\\c#\\monbe\\kentashop\\kentashop\\controllers\\billinforcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|solutionrelative:kentashop\\controllers\\billinforcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -29,6 +30,38 @@
     {
       "AbsoluteMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|d:\\c#\\monbe\\kentashop\\kentashop\\viewmodel\\billvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|solutionrelative:kentashop\\viewmodel\\billvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|D:\\clone\\Test-Kenta\\kentashop\\viewmodel\\uservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|solutionrelative:kentashop\\viewmodel\\uservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|D:\\clone\\Test-Kenta\\kentashop\\services\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|solutionrelative:kentashop\\services\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|D:\\clone\\Test-Kenta\\kentashop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|solutionrelative:kentashop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|D:\\clone\\Test-Kenta\\kentashop\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|solutionrelative:kentashop\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|D:\\clone\\Test-Kenta\\kentashop\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|solutionrelative:kentashop\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|D:\\clone\\Test-Kenta\\kentashop\\services\\isendemailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|solutionrelative:kentashop\\services\\isendemailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|D:\\clone\\Test-Kenta\\kentashop\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|solutionrelative:kentashop\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|D:\\clone\\Test-Kenta\\kentashop\\data\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|solutionrelative:kentashop\\data\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -41,8 +74,33 @@
           "SelectedChildIndex": 3,
           "Children": [
             {
+<<<<<<< Updated upstream
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+=======
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "D:\\clone\\Test-Kenta\\KenTaShop\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "KenTaShop\\WeatherForecast.cs",
+              "ToolTip": "D:\\clone\\Test-Kenta\\KenTaShop\\WeatherForecast.cs",
+              "RelativeToolTip": "KenTaShop\\WeatherForecast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T15:01:55.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\clone\\Test-Kenta\\KenTaShop\\appsettings.json",
+              "RelativeDocumentMoniker": "KenTaShop\\appsettings.json",
+              "ToolTip": "D:\\clone\\Test-Kenta\\KenTaShop\\appsettings.json",
+              "RelativeToolTip": "KenTaShop\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAACDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-25T15:02:52.96Z"
+>>>>>>> Stashed changes
             },
             {
               "$type": "Document",
@@ -54,8 +112,24 @@
               "RelativeToolTip": "KenTaShop\\ViewModel\\BillInforVM.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAzwBEAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< Updated upstream
               "WhenOpened": "2024-04-15T04:28:21.064Z",
               "EditorCaption": ""
+=======
+              "WhenOpened": "2024-04-25T14:57:08.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PasswordHasher.cs",
+              "DocumentMoniker": "D:\\clone\\Test-Kenta\\KenTaShop\\Services\\PasswordHasher.cs",
+              "RelativeDocumentMoniker": "KenTaShop\\Services\\PasswordHasher.cs",
+              "ToolTip": "D:\\clone\\Test-Kenta\\KenTaShop\\Services\\PasswordHasher.cs",
+              "RelativeToolTip": "KenTaShop\\Services\\PasswordHasher.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAcAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T14:42:18.461Z"
+>>>>>>> Stashed changes
             },
             {
               "$type": "Document",
@@ -67,18 +141,31 @@
               "RelativeToolTip": "KenTaShop\\Controllers\\BillInforController.cs",
               "ViewState": "AQIAAB0AAAAAAAAAAAAqwCcAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< Updated upstream
               "WhenOpened": "2024-04-15T04:30:39.138Z",
               "EditorCaption": ""
+=======
+              "WhenOpened": "2024-04-25T14:38:32.953Z"
+>>>>>>> Stashed changes
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< Updated upstream
               "Title": "IBillInforRepository.cs",
               "DocumentMoniker": "D:\\C#\\MonBE\\KenTaShop\\KenTaShop\\Services\\IBillInforRepository.cs",
               "RelativeDocumentMoniker": "KenTaShop\\Services\\IBillInforRepository.cs",
               "ToolTip": "D:\\C#\\MonBE\\KenTaShop\\KenTaShop\\Services\\IBillInforRepository.cs",
               "RelativeToolTip": "KenTaShop\\Services\\IBillInforRepository.cs",
               "ViewState": "AQIAAD8AAAAAAAAAAAAUwDgAAAAVAAAA",
+=======
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\clone\\Test-Kenta\\KenTaShop\\Services\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "KenTaShop\\Services\\IUserRepository.cs",
+              "ToolTip": "D:\\clone\\Test-Kenta\\KenTaShop\\Services\\IUserRepository.cs",
+              "RelativeToolTip": "KenTaShop\\Services\\IUserRepository.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAawHIAAAAVAAAA",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-15T04:21:28.763Z",
               "EditorCaption": ""
@@ -93,6 +180,7 @@
               "RelativeToolTip": "KenTaShop\\Program.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAABgAAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< Updated upstream
               "WhenOpened": "2024-04-14T04:14:22.604Z",
               "EditorCaption": ""
             },
@@ -108,6 +196,9 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-15T03:23:47.988Z",
               "EditorCaption": ""
+=======
+              "WhenOpened": "2024-04-25T14:36:07.009Z"
+>>>>>>> Stashed changes
             },
             {
               "$type": "Document",
@@ -119,8 +210,12 @@
               "RelativeToolTip": "KenTaShop\\ViewModel\\BillVM.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAIwCcAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< Updated upstream
               "WhenOpened": "2024-04-15T03:24:56.994Z",
               "EditorCaption": ""
+=======
+              "WhenOpened": "2024-04-25T14:30:41.336Z"
+>>>>>>> Stashed changes
             },
             {
               "$type": "Document",
@@ -132,8 +227,12 @@
               "RelativeToolTip": "KenTaShop\\Controllers\\BillController.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAAQwB4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< Updated upstream
               "WhenOpened": "2024-04-15T03:23:31.342Z",
               "EditorCaption": ""
+=======
+              "WhenOpened": "2024-04-25T14:48:27.008Z"
+>>>>>>> Stashed changes
             }
           ]
         }
