@@ -44,7 +44,7 @@ public partial class ClothesShopManagementContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
 
-        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-G6FDBDO\\SQLEXPRESS;Initial Catalog=ClothesShopManagement;Integrated Security=True;Trust Server Certificate=True");
+        => optionsBuilder.UseSqlServer("Data Source=DucTrong;Initial Catalog=ClothesShopManagement;Integrated Security=True;Trust Server Certificate=True");
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -231,7 +231,7 @@ public partial class ClothesShopManagementContext : DbContext
             entity.Property(e => e.CreatedDate).HasColumnType("date");
             entity.Property(e => e.Email).HasMaxLength(100);
             entity.Property(e => e.Location).HasMaxLength(50);
-            entity.Property(e => e.Pass).HasMaxLength(50);
+            entity.Property(e => e.Pass).HasMaxLength(200);
             entity.Property(e => e.Username).HasMaxLength(50);
 
             entity.HasOne(d => d.IdUsertypeNavigation).WithMany(p => p.Users)
