@@ -79,9 +79,11 @@ namespace KenTaShop.Services
                     Username = adminadd.Username,
                     Pass = passhash,
                     Email = adminadd.Email,
+                    IdUsertype = 1
                 };
 
                 await _context.AddAsync(accuser);
+                await _context.SaveChangesAsync();
                 EmailModel emailModel = new EmailModel();
                 emailModel.ToEmail = adminadd.Email;
                 emailModel.Subject = "Chào bạn";
