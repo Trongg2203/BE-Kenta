@@ -21,6 +21,13 @@ namespace KenTaShop.ViewModel
 
         public int? IdGoods { get; set; }
     }
+    public class Delete
+
+    {
+        public int? Idbill { get; set; }
+
+        public int? IdGoods { get; set; }
+    }
 
     public class AddBillInfor
     {

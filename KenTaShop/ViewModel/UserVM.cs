@@ -54,5 +54,15 @@ namespace KenTaShop.ViewModel
 
         public string Pass { get; set; } = null!;
     }
+    public class Register
+    {
+        public string? Username { get; set; }
+        public string Pass { get; set; }
+        public bool? Gender { get; set; }
+        public string? Email { get; set; }
+        public int? PhoneNumber { get; set; }
+
+        public string? Location { get; set; }
+    }
     
 }

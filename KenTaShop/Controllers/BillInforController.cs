@@ -35,7 +35,7 @@ namespace KenTaShop.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> Delete([FromForm] BillInforMD delete)
+        public async Task<IActionResult> Delete([FromForm] Delete delete)
         {
             return Ok(await _inforBillRepo.Delete(delete));
         }

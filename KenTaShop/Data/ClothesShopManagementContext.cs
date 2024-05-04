@@ -231,7 +231,7 @@ public partial class ClothesShopManagementContext : DbContext
             entity.Property(e => e.CreatedDate).HasColumnType("date");
             entity.Property(e => e.Email).HasMaxLength(100);
             entity.Property(e => e.Location).HasMaxLength(50);
-            entity.Property(e => e.Pass).HasMaxLength(200);
+            entity.Property(e => e.Pass).HasMaxLength(500);
             entity.Property(e => e.Username).HasMaxLength(50);
 
             entity.HasOne(d => d.IdUsertypeNavigation).WithMany(p => p.Users)
