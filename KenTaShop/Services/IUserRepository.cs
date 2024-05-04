@@ -3,6 +3,7 @@ using KenTaShop.ViewModel;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Win32;
 
 namespace KenTaShop.Services
 {
@@ -14,6 +15,8 @@ namespace KenTaShop.Services
         Task<JsonResult> EditUser(int idUser, InforUser infouser);
         Task<List<UserMD>> GetAll();
         Task<JsonResult> Register(Register register);
+        Task<JsonResult> ResetPass(int id);
+        Task<JsonResult?> ChangePass(ChangePass changePass);
 
         public class UserRepository : IUserRepository
         {
@@ -97,6 +100,36 @@ namespace KenTaShop.Services
                 {
                     StatusCode = StatusCodes.Status201Created
                 };
+            }
+
+            public async Task<JsonResult> ResetPass(int id)
+            {
+                var check = await _context.Users.SingleOrDefaultAsync(a => a.IdUser == id);
+                if(check == null)
+                {
+                    return new JsonResult("Không tìm thấy người dùng")
+                    {
+                        StatusCode = StatusCodes.Status400BadRequest
+                    };
+                }
+                else
+                {
+                    var pass = passwordHasher.GetRandomPassword();
+                    Console.WriteLine(pass);
+                    var hashpass=passwordHasher.HashPassword(pass);
+                    check.Pass = hashpass;
+                    await _context.SaveChangesAsync();
+                    EmailModel emailModel = new EmailModel();
+                    emailModel.ToEmail = check.Email;
+                    emailModel.Subject = "Chào bạn";
+                    emailModel.Body = $"tài khoản:{check.Email} \n mật khẩu mới là {pass}";
+                    var kt = IsendEmailServicesRepo.SendEmail(emailModel);
+                    return new JsonResult("Đã reset pass")
+                    {
+                        StatusCode=StatusCodes.Status200OK
+                    };
+
+                }
             }
 
             public async Task<JsonResult> DeleteById(int idUser)
@@ -194,6 +227,33 @@ namespace KenTaShop.Services
                     return new JsonResult("Đã có tên người dùng này ")
                     {
                         StatusCode = StatusCodes.Status400BadRequest
+                    };
+                }
+            }
+
+            public async Task<JsonResult?> ChangePass(ChangePass changePass)
+            {
+                var check =await _context.Users.SingleOrDefaultAsync(a=>a.IdUser==changePass.IdUser);
+                if(check is null)
+                {
+                    return new JsonResult("Không tìm thấy người dùng")
+                    {
+                        StatusCode = StatusCodes.Status400BadRequest
+                    };
+                }
+                else
+                {
+                    var hashpass = passwordHasher.HashPassword(changePass.Pass);
+                    check.Pass = hashpass;
+                    await _context.SaveChangesAsync();
+                    EmailModel emailModel=new EmailModel();
+                    emailModel.ToEmail=check.Email;
+                    emailModel.Subject = "Chào bạn";
+                    emailModel.Body = $"Tạo thành công tài khoản: {check.Email} \n với mật khẩu là {changePass.Pass}";
+                    var kt = IsendEmailServicesRepo.SendEmail(emailModel);
+                    return new JsonResult("Đã thay đổi pass")
+                    {
+                        StatusCode = StatusCodes.Status200OK
                     };
                 }
             }

@@ -64,5 +64,10 @@ namespace KenTaShop.ViewModel
 
         public string? Location { get; set; }
     }
+    public class ChangePass
+    {
+        public int IdUser { get; set; }
+        public string Pass { get; set; }
+    }
     
 }
