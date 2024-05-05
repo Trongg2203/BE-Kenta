@@ -12,6 +12,7 @@ using System.Text;
 
 namespace KenTaShop.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
@@ -28,7 +29,7 @@ namespace KenTaShop.Controllers
             passwordHasher = new PasswordHasher();
             _userRepo = userRepo;
         }
-        [HttpGet("All")]     
+        [HttpGet("All")]
         public async Task<IActionResult> GetAll()
         {
             var users = await _userRepo.GetAll();
@@ -102,7 +103,6 @@ namespace KenTaShop.Controllers
         }
         //tao token
         [NonAction]
-
         public string GenerateToken(User user)
         {
             // khởi tạo biến

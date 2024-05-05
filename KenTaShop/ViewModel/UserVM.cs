@@ -66,8 +66,10 @@ namespace KenTaShop.ViewModel
     }
     public class ChangePass
     {
-        public int IdUser { get; set; }
-        public string Pass { get; set; }
+        public string? Email { get; set; }
+        public string oldPass { get; set; }
+        public string NewPass { get; set; }
+        public string ReNewPass { get; set; }
     }
     
 }

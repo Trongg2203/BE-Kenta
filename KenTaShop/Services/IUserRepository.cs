@@ -203,7 +203,7 @@ namespace KenTaShop.Services
                         Username = register.Username,
                         Pass = passhash,
                         Email = register.Email,
-                        IdUsertype = 1
+                        IdUsertype = 2
 
                     };
                     await _context.AddAsync(accuser);
@@ -233,7 +233,7 @@ namespace KenTaShop.Services
 
             public async Task<JsonResult?> ChangePass(ChangePass changePass)
             {
-                var check =await _context.Users.SingleOrDefaultAsync(a=>a.IdUser==changePass.IdUser);
+                var check =await _context.Users.SingleOrDefaultAsync(a=>a.Email==changePass.Email);
                 if(check is null)
                 {
                     return new JsonResult("Không tìm thấy người dùng")
@@ -243,18 +243,42 @@ namespace KenTaShop.Services
                 }
                 else
                 {
-                    var hashpass = passwordHasher.HashPassword(changePass.Pass);
-                    check.Pass = hashpass;
-                    await _context.SaveChangesAsync();
-                    EmailModel emailModel=new EmailModel();
-                    emailModel.ToEmail=check.Email;
-                    emailModel.Subject = "Chào bạn";
-                    emailModel.Body = $"Tạo thành công tài khoản: {check.Email} \n với mật khẩu là {changePass.Pass}";
-                    var kt = IsendEmailServicesRepo.SendEmail(emailModel);
-                    return new JsonResult("Đã thay đổi pass")
+                    if (passwordHasher.verifyPassword(changePass.oldPass,check.Pass))
                     {
-                        StatusCode = StatusCodes.Status200OK
-                    };
+                        if (changePass.NewPass == changePass.ReNewPass)
+                        {
+                            if (changePass.NewPass != check.Pass)
+                            {
+                                var hashpass = passwordHasher.HashPassword(changePass.NewPass);
+                                check.Pass = hashpass;
+                                await _context.SaveChangesAsync();
+                                EmailModel emailModel = new EmailModel();
+                                emailModel.ToEmail = check.Email;
+                                emailModel.Subject = "Chào bạn";
+                                emailModel.Body = $"Tạo thành công tài khoản: {check.Email} \n với mật khẩu là {changePass.NewPass}";
+                                var kt = IsendEmailServicesRepo.SendEmail(emailModel);
+                                return new JsonResult("Đã thay đổi pass")
+                                {
+                                    StatusCode = StatusCodes.Status200OK
+                                };
+                            }
+                            else return new JsonResult("Mật khẩu mới phải khác mật khẩu cũ")
+                            {
+                                StatusCode = StatusCodes.Status400BadRequest
+                            };
+                        }
+                        else return new JsonResult("Mật khẩu mới nhập 2 lầm không giống nhau")
+                        {
+                            StatusCode = StatusCodes.Status400BadRequest
+                        };
+                    }
+                    else
+                    {
+                        return new JsonResult("Mật khẩu không đúng")
+                        {
+                            StatusCode = StatusCodes.Status400BadRequest
+                        };
+                    }
                 }
             }
         }
