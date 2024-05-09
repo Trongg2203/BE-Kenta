@@ -3,6 +3,7 @@ using KenTaShop.ViewModel;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Win32;
 
 namespace KenTaShop.Services
 {
@@ -13,7 +14,9 @@ namespace KenTaShop.Services
         Task<JsonResult> DeleteById(int idUser);
         Task<JsonResult> EditUser(int idUser, InforUser infouser);
         Task<List<UserMD>> GetAll();
-      
+        Task<JsonResult> Register(Register register);
+        Task<JsonResult> ResetPass(int id);
+        Task<JsonResult?> ChangePass(ChangePass changePass);
 
         public class UserRepository : IUserRepository
         {
@@ -99,6 +102,36 @@ namespace KenTaShop.Services
                 };
             }
 
+            public async Task<JsonResult> ResetPass(int id)
+            {
+                var check = await _context.Users.SingleOrDefaultAsync(a => a.IdUser == id);
+                if(check == null)
+                {
+                    return new JsonResult("Không tìm thấy người dùng")
+                    {
+                        StatusCode = StatusCodes.Status400BadRequest
+                    };
+                }
+                else
+                {
+                    var pass = passwordHasher.GetRandomPassword();
+                    Console.WriteLine(pass);
+                    var hashpass=passwordHasher.HashPassword(pass);
+                    check.Pass = hashpass;
+                    await _context.SaveChangesAsync();
+                    EmailModel emailModel = new EmailModel();
+                    emailModel.ToEmail = check.Email;
+                    emailModel.Subject = "Chào bạn";
+                    emailModel.Body = $"tài khoản:{check.Email} \n mật khẩu mới là {pass}";
+                    var kt = IsendEmailServicesRepo.SendEmail(emailModel);
+                    return new JsonResult("Đã reset pass")
+                    {
+                        StatusCode=StatusCodes.Status200OK
+                    };
+
+                }
+            }
+
             public async Task<JsonResult> DeleteById(int idUser)
             {
                 var checkexist = await _context.Users.SingleOrDefaultAsync(a => a.IdUser == idUser);
@@ -156,6 +189,97 @@ namespace KenTaShop.Services
                 }).ToListAsync();
 
                 return users;
+            }
+
+            public async Task<JsonResult> Register(Register register)
+            {
+                var check =await _context.Users.SingleOrDefaultAsync(a=>a.Username == register.Username);
+                if (check==null)
+                {
+                    var passhash = passwordHasher.HashPassword(register.Pass);
+                    var accuser = new User
+                    {
+
+                        Username = register.Username,
+                        Pass = passhash,
+                        Email = register.Email,
+                        IdUsertype = 2
+
+                    };
+                    await _context.AddAsync(accuser);
+                    await _context.SaveChangesAsync();
+                    EmailModel emailModel = new EmailModel();
+                    emailModel.ToEmail = register.Email;
+                    emailModel.Subject = "Chào bạn";
+                    emailModel.Body = $"Tạo thành công tài khoản: {register.Email} \n với mật khẩu là {register.Pass}";
+                    var kt = IsendEmailServicesRepo.SendEmail(emailModel);
+                    if (kt)
+                        Console.WriteLine("gui mail thanh cong");
+                    else
+                    { Console.WriteLine("gui mail that bai"); }
+                    return new JsonResult("thêm tài khoản thành công ")
+                    {
+                        StatusCode = StatusCodes.Status201Created
+                    };
+                }
+                else
+                {
+                    return new JsonResult("Đã có tên người dùng này ")
+                    {
+                        StatusCode = StatusCodes.Status400BadRequest
+                    };
+                }
+            }
+
+            public async Task<JsonResult?> ChangePass(ChangePass changePass)
+            {
+                var check =await _context.Users.SingleOrDefaultAsync(a=>a.Email==changePass.Email);
+                if(check is null)
+                {
+                    return new JsonResult("Không tìm thấy người dùng")
+                    {
+                        StatusCode = StatusCodes.Status400BadRequest
+                    };
+                }
+                else
+                {
+                    if (passwordHasher.verifyPassword(changePass.oldPass,check.Pass))
+                    {
+                        if (changePass.NewPass == changePass.ReNewPass)
+                        {
+                            if (changePass.NewPass != check.Pass)
+                            {
+                                var hashpass = passwordHasher.HashPassword(changePass.NewPass);
+                                check.Pass = hashpass;
+                                await _context.SaveChangesAsync();
+                                EmailModel emailModel = new EmailModel();
+                                emailModel.ToEmail = check.Email;
+                                emailModel.Subject = "Chào bạn";
+                                emailModel.Body = $"Tạo thành công tài khoản: {check.Email} \n với mật khẩu là {changePass.NewPass}";
+                                var kt = IsendEmailServicesRepo.SendEmail(emailModel);
+                                return new JsonResult("Đã thay đổi pass")
+                                {
+                                    StatusCode = StatusCodes.Status200OK
+                                };
+                            }
+                            else return new JsonResult("Mật khẩu mới phải khác mật khẩu cũ")
+                            {
+                                StatusCode = StatusCodes.Status400BadRequest
+                            };
+                        }
+                        else return new JsonResult("Mật khẩu mới nhập 2 lầm không giống nhau")
+                        {
+                            StatusCode = StatusCodes.Status400BadRequest
+                        };
+                    }
+                    else
+                    {
+                        return new JsonResult("Mật khẩu không đúng")
+                        {
+                            StatusCode = StatusCodes.Status400BadRequest
+                        };
+                    }
+                }
             }
         }
     }

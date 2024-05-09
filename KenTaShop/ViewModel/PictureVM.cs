@@ -13,7 +13,15 @@ namespace KenTaShop.ViewModel
     }
     public class PictureMD:PictureVM
     {
-
         public virtual Good IdGoodsNavigation { get; set; } = null!;
     }
+
+    public class HinhAnhSanPham
+    {
+        public string? Url { get; set; }
+
+
+    }
+
+
 }

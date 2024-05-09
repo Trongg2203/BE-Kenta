@@ -8,7 +8,7 @@ namespace KenTaShop.Services
     public interface IBillInforRepository
     {
         Task<JsonResult> AddBillInfor(AddBillInfor billinformd);
-        Task<JsonResult> Delete(BillInforMD delete);
+        Task<JsonResult> Delete(Delete delete);
         Task<JsonResult> Edit( AddBillInfor editbillinfor);
         Task<List<BillInforMD>> GetAll();
 
@@ -39,7 +39,7 @@ namespace KenTaShop.Services
                 };
             }
 
-            public async Task<JsonResult> Delete(BillInforMD delete)
+            public async Task<JsonResult> Delete(Delete delete)
             {
                 var checkexist = await _context.Billinfors.SingleOrDefaultAsync(a => a.Idbill == delete.Idbill && a.IdGoods == delete.IdGoods);
                 if (checkexist == null)

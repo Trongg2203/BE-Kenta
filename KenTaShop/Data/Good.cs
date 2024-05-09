@@ -25,3 +25,4 @@ public partial class Good
 
     public virtual ICollection<Picture> Pictures { get; set; } = new List<Picture>();
 }
+

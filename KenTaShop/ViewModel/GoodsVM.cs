@@ -32,4 +32,18 @@ namespace KenTaShop.ViewModel
     {
         public int IdGoods { get; set; }
     }
+
+    public class HinhAnhSp 
+    {
+        public int IdGoods { get; set; }
+
+        public string? GoodsName { get; set; }
+
+        public int? IdGoodstype { get; set; }
+
+        public int? Quantity { get; set; }
+
+        public double? GoodsPrice { get; set; }
+        public virtual ICollection<HinhAnhSanPham> Pictures { get; set; } = new List<HinhAnhSanPham>();
+    }
 }
