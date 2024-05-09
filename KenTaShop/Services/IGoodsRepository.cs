@@ -7,7 +7,7 @@ namespace KenTaShop.Services
 {
     public interface IGoodsRepository
     {
-        Task<List<GoodsVM>> GetAll();
+        Task<List<HinhAnhSp>> GetAll();
         Task<GoodsVM> GetById(int id);
         Task<JsonResult> Add(GoodsVM goodsVM);
         Task<JsonResult?> Edit(GoodsVM good);
@@ -125,15 +125,19 @@ namespace KenTaShop.Services
             }
         }
 
-        public async Task<List<GoodsVM>> GetAll()
+        public async Task<List<HinhAnhSp>> GetAll()
         {
-            var Goods=await _context.Goods.Select(s=> new GoodsVM
+            var Goods = await _context.Goods.Include(u => u.Pictures).Select(s => new HinhAnhSp
             {
-                IdGoods=s.IdGoods,
-                GoodsName=s.GoodsName,
-                IdGoodstype=s.IdGoodstype,
-                Quantity= s.Quantity,
-                GoodsPrice=s.GoodsPrice,
+                IdGoods = s.IdGoods,
+                GoodsName = s.GoodsName,
+                IdGoodstype = s.IdGoodstype,
+                Quantity = s.Quantity,
+                GoodsPrice = s.GoodsPrice,
+                Pictures = s.Pictures.Select(a => new HinhAnhSanPham
+                {
+                    Url = a.Url,
+                }).ToList()
             }).ToListAsync();
             return Goods;
         }
