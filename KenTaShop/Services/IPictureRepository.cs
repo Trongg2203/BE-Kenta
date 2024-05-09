@@ -34,7 +34,7 @@ namespace KenTaShop.Services
 
                 var extension = "." + file.FileName.Split('.')[file.FileName.Split('.').Length - 1];
 
-                if (extension == ".jpg" || extension == ".jpge" || extension == ".png")
+                if (extension == ".jpg" || extension == ".jpge" || extension == ".png"||extension==".webp")
                 {
                     local = "Images";
                 }

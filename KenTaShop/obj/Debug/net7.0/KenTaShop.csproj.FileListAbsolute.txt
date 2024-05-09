@@ -307,3 +307,4 @@ D:\clone\Test-Kenta\KenTaShop\obj\Debug\net7.0\KenTaShop.genruntimeconfig.cache
 D:\clone\Test-Kenta\KenTaShop\obj\Debug\net7.0\ref\KenTaShop.dll
 D:\clone\Test-Kenta\KenTaShop\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\admin\Documents\GitHub\Test-Kenta\KenTaShop\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\nthai\Downloads\Test-Kenta\KenTaShop\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
