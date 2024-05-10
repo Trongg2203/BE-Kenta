@@ -32,7 +32,7 @@ namespace KenTaShop.Controllers
             return Ok(await _GoodsRepo.Add(Good));
         }
         [HttpPut("Edit")]
-        public async Task<IActionResult> Edit(GoodsVM Good)
+        public async Task<IActionResult> Edit(GoodsMD Good)
         {
             return Ok(await _GoodsRepo.Edit(Good));
         }

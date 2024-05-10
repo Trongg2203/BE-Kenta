@@ -4,8 +4,7 @@ namespace KenTaShop.ViewModel
 {
     public class GoodsVM
     {
-        public int IdGoods { get; set; }
-
+        
         public string? GoodsName { get; set; }
 
         public int? IdGoodstype { get; set; }
@@ -18,6 +17,7 @@ namespace KenTaShop.ViewModel
     }
     public class GoodsMD:GoodsVM
     {
+        public int IdGoods { get; set; }
         public virtual ICollection<Billinfor> Billinfors { get; set; } = new List<Billinfor>();
 
         public virtual ICollection<Goodsinfor> Goodsinfors { get; set; } = new List<Goodsinfor>();
@@ -46,4 +46,6 @@ namespace KenTaShop.ViewModel
         public double? GoodsPrice { get; set; }
         public virtual ICollection<HinhAnhSanPham> Pictures { get; set; } = new List<HinhAnhSanPham>();
     }
+
+
 }

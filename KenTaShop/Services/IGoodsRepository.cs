@@ -8,9 +8,9 @@ namespace KenTaShop.Services
     public interface IGoodsRepository
     {
         Task<List<HinhAnhSp>> GetAll();
-        Task<GoodsVM> GetById(int id);
+        Task<GoodsMD> GetById(int id);
         Task<JsonResult> Add(GoodsVM goodsVM);
-        Task<JsonResult?> Edit(GoodsVM good);
+        Task<JsonResult?> Edit(GoodsMD good);
         Task<IActionResult?> Delete(int id);
         Task<JsonResult?> AddPic(Goodpic idpic, List<IFormFile> files);
     }
@@ -27,9 +27,6 @@ namespace KenTaShop.Services
 
         public async Task<JsonResult> Add(GoodsVM goodsVM)
         {
-            var Goods = await _context.Goods.SingleOrDefaultAsync(s => s.IdGoods == goodsVM.IdGoods);
-            if (Goods == null)
-            {
                 var _Good = new Good
                 {
                     //IdGoods = goodsVM.IdGoods,
@@ -44,14 +41,7 @@ namespace KenTaShop.Services
                 {
                     StatusCode = StatusCodes.Status200OK
                 };
-            }
-            else
-            {
-                return new JsonResult("Đã có hàng này ")
-                {
-                    StatusCode = StatusCodes.Status400BadRequest
-                };
-            }
+            
         }
 
         public async Task<JsonResult?> AddPic(Goodpic idpic, List<IFormFile> files)
@@ -72,7 +62,7 @@ namespace KenTaShop.Services
                     _context.Pictures.Add(item);
                 }
             }
-            _context.SaveChanges();
+            _context.SaveChanges(); 
             return new JsonResult("thanh cong")
             {
 
@@ -91,8 +81,7 @@ namespace KenTaShop.Services
                     StatusCode = StatusCodes.Status200OK
                 };
             }
-            else
-            {
+            else            {
                 return new JsonResult("Không tìm thấy")
                 {
                     StatusCode = StatusCodes.Status400BadRequest
@@ -100,7 +89,7 @@ namespace KenTaShop.Services
             }
         }
 
-        public async Task<JsonResult?> Edit(GoodsVM good)
+        public async Task<JsonResult?> Edit(GoodsMD good)
         {
             var Goods=await _context.Goods.SingleOrDefaultAsync(s=>s.IdGoods == good.IdGoods);
             if(Goods == null)
@@ -142,7 +131,7 @@ namespace KenTaShop.Services
             return Goods;
         }
 
-        public async Task<GoodsVM> GetById(int id)
+        public async Task<GoodsMD> GetById(int id)
         {
             var Goods=await _context.Goods.SingleOrDefaultAsync(s=>s.IdGoods==id);
             if (Goods==null)
@@ -151,7 +140,7 @@ namespace KenTaShop.Services
             }
             else
             {
-                return new GoodsVM { IdGoods = Goods.IdGoods, GoodsName = Goods.GoodsName, GoodsPrice = Goods.GoodsPrice, IdGoodstype = Goods.IdGoodstype, Quantity = Goods.Quantity, };
+                return new GoodsMD { IdGoods = Goods.IdGoods, GoodsName = Goods.GoodsName, GoodsPrice = Goods.GoodsPrice, IdGoodstype = Goods.IdGoodstype, Quantity = Goods.Quantity, };
             }
         }
     }

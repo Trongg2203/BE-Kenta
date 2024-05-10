@@ -11,7 +11,7 @@ namespace KenTaShop.Services
         Task<JsonResult> DeleteGoodstype(int idgoodstype);
         Task<JsonResult> EditGoodstype(int idgoodstype, GoodstypeVM goodstypeVM);
         Task<List<GoodstypeMD>> GetAll();
-        public Task<GoodstypeMD> GetById(int id);
+        public Task<GetDetail> GetById(int id);
     }
     public class GoodstypeRepository : IGoodstypeRepository
     {
@@ -98,19 +98,26 @@ namespace KenTaShop.Services
             return goodstype;
         }
 
-        public async Task<GoodstypeMD> GetById(int id)
+        public async Task<GetDetail> GetById(int id)
         {
-            var goodstype = await _context.Goodstypes.SingleOrDefaultAsync(h => h.IdGoodstype == id);
+            var goodstype = await _context.Goodstypes.Include(u => u.Goods).SingleOrDefaultAsync(h => h.IdGoodstype == id);
             if (goodstype is null)
                 return null;
-            return new GoodstypeMD
+            return new GetDetail
             {
-                
+
                 IdGoodstype = goodstype.IdGoodstype,
                 GoodstypeDetail = goodstype.GoodstypeDetail,
                 Displayorder = goodstype.Displayorder,
                 FatherFolder = goodstype.FatherFolder,
                 SonFolder = goodstype.SonFolder,
+                Goods = goodstype.Goods.Select(u => new GoodsVM
+                {
+                    IdGoodstype = u.IdGoodstype,
+                    GoodsName = u.GoodsName,
+                    GoodsPrice = u.GoodsPrice,
+                    Quantity = u.Quantity,
+                }).ToList()
             };
         }
     }
