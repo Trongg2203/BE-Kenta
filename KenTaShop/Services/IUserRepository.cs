@@ -1,4 +1,4 @@
-﻿using KenTaShop.Data;
+﻿ using KenTaShop.Data;
 using KenTaShop.ViewModel;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

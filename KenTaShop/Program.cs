@@ -2,6 +2,7 @@ using KenTaShop.Data;
 using KenTaShop.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
@@ -103,6 +104,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
 app.UseHttpsRedirection();
 
 app.UseCors(options =>
@@ -110,6 +112,13 @@ app.UseCors(options =>
     options.AllowAnyHeader();
     options.AllowAnyMethod();
     options.AllowAnyOrigin();
+});
+
+app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions()
+{
+    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"Upload")),
+    RequestPath = new PathString("/Upload")
 });
 
 app.UseAuthorization();
