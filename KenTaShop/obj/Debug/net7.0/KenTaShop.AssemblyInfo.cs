@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KenTaShop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d611b6966c5e8176b0e7d4ab70d7d5ada92f2445")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55be5221477dbb6bfbc1fd14f833ec8d21c21dfd")]
 [assembly: System.Reflection.AssemblyProductAttribute("KenTaShop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KenTaShop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
