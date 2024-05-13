@@ -17,6 +17,7 @@ namespace KenTaShop.Services
         Task<JsonResult> Register(Register register);
         Task<JsonResult> ResetPass(int id);
         Task<JsonResult?> ChangePass(ChangePass changePass);
+        Task<GetByIdUser> GetByIdUser(int getiduser);
 
         public class UserRepository : IUserRepository
         {
@@ -279,6 +280,26 @@ namespace KenTaShop.Services
                             StatusCode = StatusCodes.Status400BadRequest
                         };
                     }
+                }
+            }
+
+            public async Task<GetByIdUser> GetByIdUser(int getiduser)
+            {
+                var Users = await _context.Users.SingleOrDefaultAsync(s => s.IdUser == getiduser);
+                if(Users == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return new GetByIdUser
+                    {
+                        IdUser = Users.IdUser,
+                        Username = Users.Username,
+                        Email = Users.Email,
+                        Location = Users.Location,
+                        PhoneNumber = Users.PhoneNumber,
+                    };
                 }
             }
         }
