@@ -47,5 +47,34 @@ namespace KenTaShop.ViewModel
         public virtual ICollection<HinhAnhSanPham> Pictures { get; set; } = new List<HinhAnhSanPham>();
     }
 
+    public class GetByCate
+    {
+        public int IdGoods { get; set; }
 
+        public string? GoodsName { get; set; }
+
+        public int? IdGoodstype { get; set; }
+
+        public int? Quantity { get; set; }
+
+        public double? GoodsPrice { get; set; }
+        public virtual ICollection<Picture> Pictures { get; set; } = new List<Picture>();
+    }
+
+
+    public class GoodDetail
+    {
+        public int IdGoods { get; set; }
+
+        public string? GoodsName { get; set; }
+
+        public int? IdGoodstype { get; set; }
+
+        public int? Quantity { get; set; }
+
+        public double? GoodsPrice { get; set; }
+        public virtual ICollection<HinhAnhSanPham> HinhSanPham { get; set; } = new List<HinhAnhSanPham>();
+
+        public virtual ICollection<DetailGoodinfor> detailgoodinfor { get; set; } = new List<DetailGoodinfor>();
+    }
 }

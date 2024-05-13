@@ -22,7 +22,7 @@ namespace KenTaShop.Controllers
             var Goodsin = await _GoodsinforRepo.GetAll();
             return Ok(Goodsin);
         }
-        [HttpGet("GetById")]
+        [HttpGet("GetById/{id}")]
         public async Task<IActionResult> GetById(int id)
         {
             var Goodsin = await _GoodsinforRepo.GetById(id);

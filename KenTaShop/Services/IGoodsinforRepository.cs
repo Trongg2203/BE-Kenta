@@ -8,7 +8,7 @@ namespace KenTaShop.Services
     public interface IGoodsinforRepository
     {
         Task<List<GoodsinforVM>> GetAll();
-        Task<GoodsinforVM> GetById(int id);
+        Task<GoodsinforMD> GetById(int id);
         Task<JsonResult> Add(GoodsinforVM Goodsin);
         Task<JsonResult> Edit(GoodsinforVM goo);
         Task<JsonResult> Delete(int id);
@@ -107,7 +107,7 @@ namespace KenTaShop.Services
             return Goods;
         }
 
-        public async Task<GoodsinforVM> GetById(int id)
+        public async Task<GoodsinforMD> GetById(int id)
         {
             var Goods=await _context.Goodsinfors.SingleOrDefaultAsync(s=>s.IdGoods == id);
             if (Goods == null)
@@ -116,8 +116,10 @@ namespace KenTaShop.Services
             }
             else
             {
-                return new GoodsinforVM { IdGoods = Goods.IdGoods,
+                return new GoodsinforMD { IdGoods = Goods.IdGoods,
                     GoodsDetail = Goods.GoodsDetail, Color = Goods.Color, Size = Goods.Size,
+                    IdGoodsInfor = Goods.IdGoodsInfor,IdGoodsNavigation = Goods.IdGoodsNavigation
+     
                 };
 
             }

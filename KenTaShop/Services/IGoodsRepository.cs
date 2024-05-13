@@ -7,12 +7,13 @@ namespace KenTaShop.Services
 {
     public interface IGoodsRepository
     {
-        Task<List<HinhAnhSp>> GetAll();
-        Task<GoodsMD> GetById(int id);
+        Task<List<HinhAnhSp>> GetAll(QueryProductinPage query);
+        Task<GoodDetail> GetById(int id);
         Task<JsonResult> Add(GoodsVM goodsVM);
         Task<JsonResult?> Edit(GoodsMD good);
         Task<IActionResult?> Delete(int id);
         Task<JsonResult?> AddPic(Goodpic idpic, List<IFormFile> files);
+        Task<List<GetByCate>> GetByCate(int idgoodstype);
     }
     public class GoodsRepository : IGoodsRepository
     {
@@ -114,8 +115,9 @@ namespace KenTaShop.Services
             }
         }
 
-        public async Task<List<HinhAnhSp>> GetAll()
+        public async Task<List<HinhAnhSp>> GetAll(QueryProductinPage query)
         {
+            query.SoSpinTrang = 12;
             var Goods = await _context.Goods.Include(u => u.Pictures).Select(s => new HinhAnhSp
             {
                 IdGoods = s.IdGoods,
@@ -128,19 +130,54 @@ namespace KenTaShop.Services
                     Url = a.Url,
                 }).ToList()
             }).ToListAsync();
-            return Goods;
+
+            var skip = (query.SoTrang - 1) * (query.SoSpinTrang);
+            return Goods.Skip(skip).Take(query.SoSpinTrang).ToList();
         }
 
-        public async Task<GoodsMD> GetById(int id)
+        public async Task<List<GetByCate>> GetByCate(int idgoodstype)
         {
-            var Goods=await _context.Goods.SingleOrDefaultAsync(s=>s.IdGoods==id);
+            var products = await (from b in _context.Goods
+                                  where b.IdGoodstype == idgoodstype
+                                  select new GetByCate
+                                  {
+                                      GoodsName = b.GoodsName,
+                                      IdGoodstype = b.IdGoodstype,
+                                      GoodsPrice = b.GoodsPrice,
+                                      IdGoods = b.IdGoods,
+                                      Pictures = b.Pictures,
+                                      Quantity = b.Quantity
+
+                                  }).ToListAsync();
+            return products;
+        }
+
+        public async Task<GoodDetail> GetById(int id)
+        {
+            var Goods=await _context.Goods.Include( u => u.Pictures).Include(a=> a.Goodsinfors).SingleOrDefaultAsync(s=>s.IdGoods==id);
             if (Goods==null)
             {
                 return null;
             }
             else
             {
-                return new GoodsMD { IdGoods = Goods.IdGoods, GoodsName = Goods.GoodsName, GoodsPrice = Goods.GoodsPrice, IdGoodstype = Goods.IdGoodstype, Quantity = Goods.Quantity, };
+                return new GoodDetail {
+                    IdGoods = Goods.IdGoods,
+                    GoodsName = Goods.GoodsName,
+                    GoodsPrice = Goods.GoodsPrice,
+                    IdGoodstype = Goods.IdGoodstype,
+                    Quantity = Goods.Quantity,
+                    HinhSanPham = Goods.Pictures.Select(a => new HinhAnhSanPham
+                    {
+                        Url = a.Url,
+                    }).ToList(),
+                    detailgoodinfor = Goods.Goodsinfors.Select(b => new DetailGoodinfor
+                    {
+                        GoodsDetail = b.GoodsDetail,
+                        Size = b.Size,
+                        Color = b.Color,
+                    }).ToList(),
+                };
             }
         }
     }

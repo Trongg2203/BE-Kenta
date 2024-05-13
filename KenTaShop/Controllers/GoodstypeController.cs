@@ -38,7 +38,7 @@ namespace KenTaShop.Controllers
             var goodstype = await _goodstypeRepository.DeleteGoodstype(idgoodstype);
             return Ok(goodstype);
         }
-        [HttpGet("getbyid")]
+        [HttpGet("getbyid/{id}")]
         public async Task<ActionResult<GoodstypeMD>> GetById(int id)
         {
             if (id <= 0)
