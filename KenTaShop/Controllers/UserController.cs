@@ -36,6 +36,14 @@ namespace KenTaShop.Controllers
             return Ok(users);
         }
 
+        [AllowAnonymous]
+        [HttpGet("GetbyId/{getiduser}")]
+        public async Task<IActionResult> GetByIdUser( int getiduser)
+        {
+            var users  = await _userRepo.GetByIdUser(getiduser);
+            return Ok(users);
+        }
+
         [HttpPost("IdUser")]
         public async Task<IActionResult> AddUser([FromForm] InforUser inforuser)
         {
@@ -111,6 +119,7 @@ namespace KenTaShop.Controllers
             var key = Encoding.UTF8.GetBytes(_configuration.GetSection("JWT").GetSection("Access_Secret").Value!);
             var role = (from r in dbcontext.Userstypes where r.IdUsertype == user.IdUsertype select r).SingleOrDefault();
             List<Claim> claims = [
+                new(JwtRegisteredClaimNames.NameId, user.IdUser.ToString()),
                 new (JwtRegisteredClaimNames.Email , user.Email),
                 new (JwtRegisteredClaimNames.Name, user.Username),
                 new (JwtRegisteredClaimNames.Aud, _configuration.GetSection("JWT").GetSection("ValidAudience").Value!),
