@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "D:\\clone\\Test-Kenta\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|d:\\clone\\test-kenta\\kentashop\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|solutionrelative:kentashop\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|d:\\clone\\test-kenta\\kentashop\\viewmodel\\queryproductinpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|solutionrelative:kentashop\\viewmodel\\queryproductinpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|D:\\clone\\Test-Kenta\\kentashop\\services\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|solutionrelative:kentashop\\services\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|D:\\clone\\Test-Kenta\\kentashop\\services\\igoodsinforrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|solutionrelative:kentashop\\services\\igoodsinforrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|D:\\clone\\Test-Kenta\\kentashop\\controllers\\goodscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|solutionrelative:kentashop\\controllers\\goodscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|D:\\clone\\Test-Kenta\\kentashop\\services\\igoodsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|solutionrelative:kentashop\\services\\igoodsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|D:\\clone\\Test-Kenta\\kentashop\\viewmodel\\uservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|solutionrelative:kentashop\\viewmodel\\uservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|D:\\clone\\Test-Kenta\\kentashop\\viewmodel\\authresposencs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|solutionrelative:kentashop\\viewmodel\\authresposencs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|D:\\clone\\Test-Kenta\\kentashop\\services\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|solutionrelative:kentashop\\services\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|D:\\clone\\Test-Kenta\\kentashop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|solutionrelative:kentashop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|D:\\clone\\Test-Kenta\\kentashop\\services\\igoodsinforrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|solutionrelative:kentashop\\services\\igoodsinforrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42258030-BD9B-4785-8B6C-E2AE96EBAA9F}|KenTaShop\\KenTaShop.csproj|D:\\clone\\Test-Kenta\\kentashop\\services\\iusertyperepositoty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 275,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,68 +98,92 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserVM.cs",
-              "DocumentMoniker": "D:\\clone\\Test-Kenta\\KenTaShop\\ViewModel\\UserVM.cs",
-              "RelativeDocumentMoniker": "KenTaShop\\ViewModel\\UserVM.cs",
-              "ToolTip": "D:\\clone\\Test-Kenta\\KenTaShop\\ViewModel\\UserVM.cs",
-              "RelativeToolTip": "KenTaShop\\ViewModel\\UserVM.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAqwC8AAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T00:16:41.469Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\clone\\Test-Kenta\\KenTaShop\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "KenTaShop\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\clone\\Test-Kenta\\KenTaShop\\Controllers\\UserController.cs",
-              "RelativeToolTip": "KenTaShop\\Controllers\\UserController.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAADwvyYAAAAYAAAA",
+              "Title": "QueryProductinPage.cs",
+              "DocumentMoniker": "D:\\clone\\Test-Kenta\\KenTaShop\\ViewModel\\QueryProductinPage.cs",
+              "RelativeDocumentMoniker": "KenTaShop\\ViewModel\\QueryProductinPage.cs",
+              "ToolTip": "D:\\clone\\Test-Kenta\\KenTaShop\\ViewModel\\QueryProductinPage.cs",
+              "RelativeToolTip": "KenTaShop\\ViewModel\\QueryProductinPage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T15:07:33.725Z",
+              "WhenOpened": "2024-05-13T12:41:50.183Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "AuthResposencs.cs",
+              "DocumentMoniker": "D:\\clone\\Test-Kenta\\KenTaShop\\ViewModel\\AuthResposencs.cs",
+              "RelativeDocumentMoniker": "KenTaShop\\ViewModel\\AuthResposencs.cs",
+              "ToolTip": "D:\\clone\\Test-Kenta\\KenTaShop\\ViewModel\\AuthResposencs.cs",
+              "RelativeToolTip": "KenTaShop\\ViewModel\\AuthResposencs.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T12:41:50.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "IGoodsRepository.cs",
               "DocumentMoniker": "D:\\clone\\Test-Kenta\\KenTaShop\\Services\\IGoodsRepository.cs",
               "RelativeDocumentMoniker": "KenTaShop\\Services\\IGoodsRepository.cs",
               "ToolTip": "D:\\clone\\Test-Kenta\\KenTaShop\\Services\\IGoodsRepository.cs",
               "RelativeToolTip": "KenTaShop\\Services\\IGoodsRepository.cs",
-              "ViewState": "AQIAAIkAAAAAAAAAAAAAAIYAAABEAAAA",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAAAIYAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T04:00:00.722Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IGoodsinforRepository.cs",
-              "DocumentMoniker": "D:\\clone\\Test-Kenta\\KenTaShop\\Services\\IGoodsinforRepository.cs",
-              "RelativeDocumentMoniker": "KenTaShop\\Services\\IGoodsinforRepository.cs",
-              "ToolTip": "D:\\clone\\Test-Kenta\\KenTaShop\\Services\\IGoodsinforRepository.cs",
-              "RelativeToolTip": "KenTaShop\\Services\\IGoodsinforRepository.cs",
-              "ViewState": "AQIAAGQAAAAAAAAAAAAcwHEAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T13:54:10.585Z"
+              "WhenOpened": "2024-05-13T12:41:50.769Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "GoodsController.cs",
+              "DocumentMoniker": "D:\\clone\\Test-Kenta\\KenTaShop\\Controllers\\GoodsController.cs",
+              "RelativeDocumentMoniker": "KenTaShop\\Controllers\\GoodsController.cs",
+              "ToolTip": "D:\\clone\\Test-Kenta\\KenTaShop\\Controllers\\GoodsController.cs",
+              "RelativeToolTip": "KenTaShop\\Controllers\\GoodsController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAuwBYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T12:41:50.77Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\clone\\Test-Kenta\\KenTaShop\\Program.cs",
+              "RelativeDocumentMoniker": "KenTaShop\\Program.cs",
+              "ToolTip": "D:\\clone\\Test-Kenta\\KenTaShop\\Program.cs",
+              "RelativeToolTip": "KenTaShop\\Program.cs",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAAAG8AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T12:41:50.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "D:\\clone\\Test-Kenta\\KenTaShop\\Services\\IUserRepository.cs",
               "RelativeDocumentMoniker": "KenTaShop\\Services\\IUserRepository.cs",
               "ToolTip": "D:\\clone\\Test-Kenta\\KenTaShop\\Services\\IUserRepository.cs",
               "RelativeToolTip": "KenTaShop\\Services\\IUserRepository.cs",
-              "ViewState": "AQIAAIcAAAAAAAAAAAA3wCcBAAAVAAAA",
+              "ViewState": "AQIAABsBAAAAAAAAAAAAAB4BAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T06:15:54.354Z"
+              "WhenOpened": "2024-05-13T12:41:50.772Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
+              "Title": "IGoodsinforRepository.cs",
+              "DocumentMoniker": "D:\\clone\\Test-Kenta\\KenTaShop\\Services\\IGoodsinforRepository.cs",
+              "RelativeDocumentMoniker": "KenTaShop\\Services\\IGoodsinforRepository.cs",
+              "ToolTip": "D:\\clone\\Test-Kenta\\KenTaShop\\Services\\IGoodsinforRepository.cs",
+              "RelativeToolTip": "KenTaShop\\Services\\IGoodsinforRepository.cs",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAUwHEAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T12:41:50.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "IUserTypeRepositoty.cs",
               "DocumentMoniker": "D:\\clone\\Test-Kenta\\KenTaShop\\Services\\IUserTypeRepositoty.cs",
               "RelativeDocumentMoniker": "KenTaShop\\Services\\IUserTypeRepositoty.cs",
@@ -159,11 +191,11 @@
               "RelativeToolTip": "KenTaShop\\Services\\IUserTypeRepositoty.cs",
               "ViewState": "AQIAAEMAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T06:15:48.284Z"
+              "WhenOpened": "2024-05-13T12:41:50.773Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "AuthResponse.cs",
               "DocumentMoniker": "D:\\clone\\Test-Kenta\\KenTaShop\\ViewModel\\AuthResponse.cs",
               "RelativeDocumentMoniker": "KenTaShop\\ViewModel\\AuthResponse.cs",
@@ -171,11 +203,11 @@
               "RelativeToolTip": "KenTaShop\\ViewModel\\AuthResponse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T06:15:42.43Z"
+              "WhenOpened": "2024-05-13T12:41:50.774Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "GoodsVM.cs",
               "DocumentMoniker": "D:\\clone\\Test-Kenta\\KenTaShop\\ViewModel\\GoodsVM.cs",
               "RelativeDocumentMoniker": "KenTaShop\\ViewModel\\GoodsVM.cs",
@@ -183,11 +215,11 @@
               "RelativeToolTip": "KenTaShop\\ViewModel\\GoodsVM.cs",
               "ViewState": "AQIAAEEAAAAAAAAAAAAAwE0AAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T03:59:11.579Z"
+              "WhenOpened": "2024-05-13T12:41:50.775Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "GoodsinforController.cs",
               "DocumentMoniker": "D:\\clone\\Test-Kenta\\KenTaShop\\Controllers\\GoodsinforController.cs",
               "RelativeDocumentMoniker": "KenTaShop\\Controllers\\GoodsinforController.cs",
@@ -195,11 +227,11 @@
               "RelativeToolTip": "KenTaShop\\Controllers\\GoodsinforController.cs",
               "ViewState": "AQIAABAAAAAAAAAAAAAQwBEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T13:54:23.224Z"
+              "WhenOpened": "2024-05-13T12:41:50.775Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "GoodstypeController.cs",
               "DocumentMoniker": "D:\\clone\\Test-Kenta\\KenTaShop\\Controllers\\GoodstypeController.cs",
               "RelativeDocumentMoniker": "KenTaShop\\Controllers\\GoodstypeController.cs",
@@ -207,11 +239,11 @@
               "RelativeToolTip": "KenTaShop\\Controllers\\GoodstypeController.cs",
               "ViewState": "AQIAAB0AAAAAAAAAAAAgwCgAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T07:49:32.305Z"
+              "WhenOpened": "2024-05-13T12:41:50.776Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "IPictureRepository.cs",
               "DocumentMoniker": "D:\\clone\\Test-Kenta\\KenTaShop\\Services\\IPictureRepository.cs",
               "RelativeDocumentMoniker": "KenTaShop\\Services\\IPictureRepository.cs",
@@ -219,12 +251,12 @@
               "RelativeToolTip": "KenTaShop\\Services\\IPictureRepository.cs",
               "ViewState": "AQIAABQAAAAAAAAAAAA3wB8AAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T15:53:20.791Z",
+              "WhenOpened": "2024-05-13T12:41:50.776Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "IGoodstypeRepository.cs",
               "DocumentMoniker": "D:\\clone\\Test-Kenta\\KenTaShop\\Services\\IGoodstypeRepository.cs",
               "RelativeDocumentMoniker": "KenTaShop\\Services\\IGoodstypeRepository.cs",
@@ -232,11 +264,11 @@
               "RelativeToolTip": "KenTaShop\\Services\\IGoodstypeRepository.cs",
               "ViewState": "AQIAAF0AAAAAAAAAAAAuwGoAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T04:07:34.823Z"
+              "WhenOpened": "2024-05-13T12:41:50.777Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "GoodstypeVM.cs",
               "DocumentMoniker": "D:\\clone\\Test-Kenta\\KenTaShop\\ViewModel\\GoodstypeVM.cs",
               "RelativeDocumentMoniker": "KenTaShop\\ViewModel\\GoodstypeVM.cs",
@@ -244,7 +276,7 @@
               "RelativeToolTip": "KenTaShop\\ViewModel\\GoodstypeVM.cs",
               "ViewState": "AQIAABYAAAAAAAAAAAAmwBgAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T03:57:49.545Z"
+              "WhenOpened": "2024-05-13T12:41:50.778Z"
             }
           ]
         },

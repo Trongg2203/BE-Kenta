@@ -194,40 +194,50 @@ namespace KenTaShop.Services
 
             public async Task<JsonResult> Register(Register register)
             {
-                var check =await _context.Users.SingleOrDefaultAsync(a=>a.Username == register.Username);
-                if (check==null)
+                if (register.Pass == register.RePass)
                 {
-                    var passhash = passwordHasher.HashPassword(register.Pass);
-                    var accuser = new User
+                    var check = await _context.Users.SingleOrDefaultAsync(a => a.Username == register.Username);
+                    if (check == null)
                     {
+                        var passhash = passwordHasher.HashPassword(register.Pass);
+                        var accuser = new User
+                        {
 
-                        Username = register.Username,
-                        Pass = passhash,
-                        Email = register.Email,
-                        IdUsertype = 2
+                            Username = register.Username,
+                            Pass = passhash,
+                            Email = register.Email,
+                            IdUsertype = 2
 
-                    };
-                    await _context.AddAsync(accuser);
-                    await _context.SaveChangesAsync();
-                    EmailModel emailModel = new EmailModel();
-                    emailModel.ToEmail = register.Email;
-                    emailModel.Subject = "Chào bạn";
-                    emailModel.Body = $"Tạo thành công tài khoản: {register.Email} \n với mật khẩu là {register.Pass}";
-                    var kt = IsendEmailServicesRepo.SendEmail(emailModel);
-                    if (kt)
-                        Console.WriteLine("gui mail thanh cong");
+                        };
+                        await _context.AddAsync(accuser);
+                        await _context.SaveChangesAsync();
+                        EmailModel emailModel = new EmailModel();
+                        emailModel.ToEmail = register.Email;
+                        emailModel.Subject = "Chào bạn";
+                        emailModel.Body = $"Tạo thành công tài khoản: {register.Email} \n với mật khẩu là {register.Pass}";
+                        var kt = IsendEmailServicesRepo.SendEmail(emailModel);
+                        if (kt)
+                            Console.WriteLine("gui mail thanh cong");
+                        else
+                        { Console.WriteLine("gui mail that bai"); }
+                        return new JsonResult("thêm tài khoản thành công ")
+                        {
+                            StatusCode = StatusCodes.Status201Created
+                        };
+                    }
                     else
-                    { Console.WriteLine("gui mail that bai"); }
-                    return new JsonResult("thêm tài khoản thành công ")
                     {
-                        StatusCode = StatusCodes.Status201Created
-                    };
+                        return new JsonResult("Đã có tên người dùng này ")
+                        {
+                            StatusCode = StatusCodes.Status400BadRequest
+                        };
+                    }
                 }
                 else
                 {
-                    return new JsonResult("Đã có tên người dùng này ")
+                    return new JsonResult("Mật khẩu đã nhập không khớp")
                     {
-                        StatusCode = StatusCodes.Status400BadRequest
+                        StatusCode=StatusCodes.Status400BadRequest
                     };
                 }
             }
