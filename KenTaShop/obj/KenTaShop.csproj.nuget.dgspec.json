@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\clone\\Test-Kenta\\KenTaShop\\KenTaShop.csproj": {}
+    "C:\\Users\\admin\\Documents\\GitHub\\Test-Kenta\\KenTaShop\\KenTaShop.csproj": {}
   },
   "projects": {
-    "D:\\clone\\Test-Kenta\\KenTaShop\\KenTaShop.csproj": {
+    "C:\\Users\\admin\\Documents\\GitHub\\Test-Kenta\\KenTaShop\\KenTaShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\clone\\Test-Kenta\\KenTaShop\\KenTaShop.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Documents\\GitHub\\Test-Kenta\\KenTaShop\\KenTaShop.csproj",
         "projectName": "KenTaShop",
-        "projectPath": "D:\\clone\\Test-Kenta\\KenTaShop\\KenTaShop.csproj",
-        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-        "outputPath": "D:\\clone\\Test-Kenta\\KenTaShop\\obj\\",
+        "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\Test-Kenta\\KenTaShop\\KenTaShop.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\Documents\\GitHub\\Test-Kenta\\KenTaShop\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,11 +39,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -97,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
