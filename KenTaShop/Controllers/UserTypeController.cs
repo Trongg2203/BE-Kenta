@@ -13,7 +13,7 @@ namespace KenTaShop.Controllers
 
         public UserTypeController(IUserTypeRepositoty usertypeRepo)
         {
-            _usertypeRepo = usertypeRepo;
+            _usertypeRepo = usertypeRepo; // gan bo nho
         }
 
         [HttpGet("GetAll")]

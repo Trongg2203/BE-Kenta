@@ -20,13 +20,13 @@ namespace KenTaShop.Services
             int len = 6;
             var charecter = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_-+=<>?";
             char[] pas = new char[len];
-            using (var rng = new RNGCryptoServiceProvider())
+            using (var rng = new RNGCryptoServiceProvider()) // tao 1 class de random
             {
                 for (int i = 0; i < len; i++)
                 {
-                    byte[] bytes = new byte[1];
-                    rng.GetBytes(bytes);
-                    pas[i] = charecter[bytes[0] % charecter.Length];
+                    byte[] bytes = new byte[1]; // tao doi tuong chua 1 du lieu
+                    rng.GetBytes(bytes); // random 1 so nao do
+                    pas[i] = charecter[bytes[0] % charecter.Length];// truyen du lieu for vo pas = charec va lay gtri trong byte và % leng 
                 }
             }
             string passhash = new string(pas);
@@ -53,11 +53,11 @@ namespace KenTaShop.Services
             string passhash = pass[1];
 
             string passhashinput = Convert.ToBase64String(KeyDerivation.Pbkdf2(
-                password: password,
+                password: password, // khoi tao password nhan gtri password
                 salt: salt,
-                prf: KeyDerivationPrf.HMACSHA256,
-                iterationCount: 10000,
-                numBytesRequested: 32
+                prf: KeyDerivationPrf.HMACSHA256, // ma hoa theo kieu 256
+                iterationCount: 10000, // lap lai 10k time
+                numBytesRequested: 32 // return 32 ky tu
                 ));
             return passhash == passhashinput;
         }

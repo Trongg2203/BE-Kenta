@@ -109,7 +109,7 @@ namespace KenTaShop.Services
                 IdGoodstype = goodstype.IdGoodstype,
                 GoodstypeDetail = goodstype.GoodstypeDetail,
                 Displayorder = goodstype.Displayorder,
-                FatherFolder = goodstype.FatherFolder,
+                FatherFolder = goodstype.FatherFolder, 
                 SonFolder = goodstype.SonFolder,
                 Goods = goodstype.Goods.Select(u => new GoodsVM
                 {

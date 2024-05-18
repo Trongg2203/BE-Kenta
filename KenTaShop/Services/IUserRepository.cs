@@ -10,7 +10,7 @@ namespace KenTaShop.Services
     public interface IUserRepository
     {
         Task<JsonResult> AdminAdd(AdminAdd admiadd);
-        Task<JsonResult> AddUser(InforUser inforuser);
+        //Task<JsonResult> AddUser(InforUser inforuser);
         Task<JsonResult> DeleteById(int idUser);
         Task<JsonResult> EditUser(int idUser, InforUser infouser);
         Task<List<UserMD>> GetAll();
@@ -32,37 +32,37 @@ namespace KenTaShop.Services
                 this.IsendEmailServicesRepo = IsendEmailServicesRepo;
             }
 
-            public async Task<JsonResult> AddUser(InforUser inforuser )
-            {
-                var add = await _context.Users.SingleOrDefaultAsync( a => a.Email == inforuser.Email);
-                if (add == null)
-                {
+            //public async Task<JsonResult> AddUser(InforUser inforuser )
+            //{
+            //    var add = await _context.Users.SingleOrDefaultAsync( a => a.Email == inforuser.Email);
+            //    if (add == null)
+            //    {
 
-                    var user = new User
-                    {
-                        IdUsertype = inforuser.IdUsertype,
-                        Email = inforuser.Email,
-                        Username = inforuser.Username,
-                        Pass = inforuser.Pass
-                    };
+            //        var user = new User
+            //        {
+            //            IdUsertype = inforuser.IdUsertype,
+            //            Email = inforuser.Email,
+            //            Username = inforuser.Username,
+            //            Pass = inforuser.Pass
+            //        };
 
-                    _context.Users.Add(user);
-                    _context.SaveChanges();
-                    return new JsonResult("Thành công")
-                    {
-                        StatusCode = StatusCodes.Status201Created
-                    };
-                }
+            //        _context.Users.Add(user);
+            //        _context.SaveChanges();
+            //        return new JsonResult("Thành công")
+            //        {
+            //            StatusCode = StatusCodes.Status201Created
+            //        };
+            //    }
                 
-                else
-                {
-                    return new JsonResult("Đã tồn tai")
-                    {
-                        StatusCode = StatusCodes.Status500InternalServerError
-                    };
+            //    else
+            //    {
+            //        return new JsonResult("Đã tồn tai")
+            //        {
+            //            StatusCode = StatusCodes.Status500InternalServerError
+            //        };
 
-                }
-            }
+            //    }
+            //}
 
             public async Task<JsonResult> AdminAdd(AdminAdd adminadd)
             {
@@ -244,7 +244,7 @@ namespace KenTaShop.Services
 
             public async Task<JsonResult?> ChangePass(ChangePass changePass)
             {
-                var check =await _context.Users.SingleOrDefaultAsync(a=>a.Email==changePass.Email);
+                var check =await _context.Users.SingleOrDefaultAsync(a=>a.Email== changePass.Email);
                 if(check is null)
                 {
                     return new JsonResult("Không tìm thấy người dùng")

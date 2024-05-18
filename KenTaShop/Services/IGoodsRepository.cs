@@ -118,20 +118,20 @@ namespace KenTaShop.Services
         public async Task<List<HinhAnhSp>> GetAll(QueryProductinPage query)
         {
             query.SoSpinTrang = 12;
-            var Goods = await _context.Goods.Include(u => u.Pictures).Select(s => new HinhAnhSp
+            var Goods = await _context.Goods.Include(u => u.Pictures).Select( s => new HinhAnhSp
             {
                 IdGoods = s.IdGoods,
                 GoodsName = s.GoodsName,
                 IdGoodstype = s.IdGoodstype,
                 Quantity = s.Quantity,
                 GoodsPrice = s.GoodsPrice,
-                Pictures = s.Pictures.Select(a => new HinhAnhSanPham
+                Pictures =  s.Pictures.Select(a => new HinhAnhSanPham
                 {
                     Url = a.Url,
                 }).ToList()
             }).ToListAsync();
 
-            var skip = (query.SoTrang - 1) * (query.SoSpinTrang);
+            var skip = (query.SoTrang - 1) * (query.SoSpinTrang); 
             return Goods.Skip(skip).Take(query.SoSpinTrang).ToList();
         }
 

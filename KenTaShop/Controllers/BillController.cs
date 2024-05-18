@@ -1,10 +1,12 @@
 ﻿using KenTaShop.Services;
 using KenTaShop.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KenTaShop.Controllers
 {
+    
     [Route("api/[controller]")]
     [ApiController]
     public class BillController : ControllerBase

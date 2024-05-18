@@ -14,7 +14,7 @@ namespace KenTaShop.Controllers
         {
             _goodstypeRepository = goodstypeRepository;
         }
-        [HttpGet("GetAll")]
+        [HttpGet("GetAll")] 
         public async Task<IActionResult> GetAll()
         {
             var goodstype = await _goodstypeRepository.GetAll();
