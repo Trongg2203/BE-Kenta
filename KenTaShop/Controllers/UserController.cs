@@ -12,7 +12,7 @@ using System.Text;
 
 namespace KenTaShop.Controllers
 {
-    [Authorize(Roles ="Admin")]
+    [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase

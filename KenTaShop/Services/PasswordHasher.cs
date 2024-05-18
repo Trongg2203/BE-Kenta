@@ -20,13 +20,13 @@ namespace KenTaShop.Services
             int len = 6;
             var charecter = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_-+=<>?";
             char[] pas = new char[len];
-            using (var rng = new RNGCryptoServiceProvider())
+            using (var rng = new RNGCryptoServiceProvider()) //tao 1 class de random
             {
                 for (int i = 0; i < len; i++)
                 {
-                    byte[] bytes = new byte[1];
-                    rng.GetBytes(bytes);
-                    pas[i] = charecter[bytes[0] % charecter.Length];
+                    byte[] bytes = new byte[1]; //tao 1 doi tuong chua 1 du lieu
+                    rng.GetBytes(bytes); //random 1 so nao do
+                    pas[i] = charecter[bytes[0] % charecter.Length]; //truyen du lieu for vo pas =char va lay gtri trong byte
                 }
             }
             string passhash = new string(pas);

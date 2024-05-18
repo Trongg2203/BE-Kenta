@@ -264,8 +264,8 @@ namespace KenTaShop.Services
                                 check.Pass = hashpass;
                                 await _context.SaveChangesAsync();
                                 EmailModel emailModel = new EmailModel();
+                                emailModel.Subject = "Chào bạn"; 
                                 emailModel.ToEmail = check.Email;
-                                emailModel.Subject = "Chào bạn";
                                 emailModel.Body = $"Tạo thành công tài khoản: {check.Email} \n với mật khẩu là {changePass.NewPass}";
                                 var kt = IsendEmailServicesRepo.SendEmail(emailModel);
                                 return new JsonResult("Đã thay đổi pass")
